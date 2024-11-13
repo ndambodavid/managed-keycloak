@@ -3,8 +3,8 @@ version: '3'
 volumes:
   postgres_data:
     driver: local
-  caddy_data:
-    driver: local
+#  caddy_data:
+#    driver: local
 
 services:
   postgres:
@@ -18,7 +18,7 @@ services:
       POSTGRES_PASSWORD: password
       PGDATA: /var/lib/postgresql/data
     ports:
-      - 5433:5432
+      - 5432:5432
   keycloak:
     container_name: managed-keycloak
     image: quay.io/phasetwo/phasetwo-keycloak:latest
