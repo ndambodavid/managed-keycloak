@@ -13,7 +13,7 @@ ENV KC_DB_URL_DATABASE=keycloak
 ENV KC_DB_SCHEMA=public
 ENV KC_DB_USERNAME=keyuser
 ENV KC_DB_PASSWORD=keypass
-ENV KC_HOSTNAME=keycloak.paykit.africa
+#ENV KC_HOSTNAME=keycloak.paykit.africa
 ENV KC_HOSTNAME_STRICT=false
 ENV KC_HTTP_ENABLED=true
 ENV KC_HTTP_MANAGEMENT_PORT=9000
@@ -70,7 +70,7 @@ ENV KC_DB_URL_DATABASE=keycloak
 ENV KC_DB_SCHEMA=public
 ENV KC_DB_USERNAME=keyuser
 ENV KC_DB_PASSWORD=keypass
-ENV KC_HOSTNAME=keycloak.paykit.africa
+#ENV KC_HOSTNAME=keycloak.paykit.africa
 ENV KC_HOSTNAME_STRICT=false
 ENV KC_HTTP_ENABLED=true
 ENV KC_HTTP_MANAGEMENT_PORT=9000
@@ -79,5 +79,5 @@ ENV KC_PROXY=edge
 ENV KC_TRANSACTION_JTA_ENABLED=false
 ENV KC_TRANSACTION_XA_ENABLED=false
 
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--optimized"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev"]
 # , "--optimized", "--hostname=localhost", "--db-pool-initial-size=10", "--db-pool-min-size=10", "--db-pool-max-size=30"
